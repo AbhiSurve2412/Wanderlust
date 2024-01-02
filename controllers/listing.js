@@ -4,6 +4,7 @@ module.exports.index = async (req, res) => {
     let allListings = await Listing.find({});
     res.render("./Listings/index.ejs", { allListings });
 };
+
 module.exports.search = async (req, res) => {
     let country = req.query.country;
     console.log(country);
@@ -36,7 +37,7 @@ module.exports.category = async (req, res,next) => {
         try {
             category = category.charAt(0).toUpperCase() + category.slice(1);
             let allListings = await Listing.find({ category: category });
-            res.render("./Listings/category.ejs", { allListings,category});
+            return res.render("./Listings/category.ejs", { allListings,category});
         }catch (e) {
             req.flash("error", "Invalid Category");
             res.render("error", { error: e });
