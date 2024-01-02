@@ -1,7 +1,4 @@
-Certainly! Here's a more copy-paste-friendly version:
-
-```markdown
-# Wanderlust - Airbnb Clone
+# Wanderlust
 
 Wanderlust is a full-stack Airbnb clone built using HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB. It allows users to explore, list, and book unique accommodations.
 
