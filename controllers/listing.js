@@ -10,7 +10,6 @@ module.exports.search = async (req, res) => {
     console.log(country);
     try {
         let allListings = await Listing.find({ country: country });
-        console.log(allListings);
         if(allListings.length === 0){
             req.flash('error',"Sorry,No Service available in this country....!");
             return res.redirect("/Listings");
@@ -55,9 +54,9 @@ module.exports.showListing = async (req, res) => {
       .populate("owner");
     if (!list) {
       req.flash("error", "Listing you requested for is deleted");
-      res.redirect("/listings");
+      return res.redirect("/listings");
     }
-    res.render("./listings/show.ejs", { list });
+    res.render("./Listings/show.ejs", { list });
 };
 
 module.exports.createListing = async (req, res) => {
@@ -77,7 +76,7 @@ module.exports.renderEditForm = async (req, res) => {
     const List = await Listing.findById(id);
     if (!List) {
       req.flash("error", "Listing you requested for is deleted");
-      res.redirect("/listings");
+      return res.redirect("/listings");
     }
     let originalUrl = List.image.url;
     originalUrl = originalUrl.replace(/\/upload/g, "/upload/h_300,w_250");
