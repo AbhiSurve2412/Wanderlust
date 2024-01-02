@@ -4,24 +4,19 @@ Wanderlust is a full-stack Airbnb clone built using HTML, CSS, JavaScript, Node.
 
 ## Features
 
-- **User Authentication**: Users can sign up, log in, and authenticate using secure sessions.
-- **Listing Management**: Users can create, edit, and delete their property listings.
-- **Search and Filter**: Explore available listings based on location, category, and other filters.
-- **Reviews and Ratings**: Users can review and rate properties they have stayed at.
-- **Responsive Design**: The application is designed to be accessible on various devices.
+- User Authentication: Users can sign up, log in, and authenticate using secure sessions.
+- Listing Management: Users can create, edit, and delete their property listings.
+- Search and Filter: Explore available listings based on location, category, and other filters.
+- Reviews and Ratings: Users can review and rate properties they have stayed at.
+- Responsive Design: The application is designed to be accessible on various devices.
 
 ## Technologies Used
 
-- **Frontend**:
-  - HTML
-  - CSS
-  - JavaScript
-
-- **Backend**:
-  - Node.js
-  - Express.js
-  - MongoDB
-
+Technologies Used:
+- Frontend: HTML, CSS, JavaScript, EJS
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- 
 ## Getting Started
 
 1. Clone the repository:
