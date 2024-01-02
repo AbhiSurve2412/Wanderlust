@@ -1,0 +1,101 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form
+        method="post"
+        action="/Listings"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="listing[title]" class="form-label">Title</label>
+          <input
+            type="text"
+            name="listing[title]"
+            placeholder="Add a catchy title"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Title Looks good!</div>
+        </div>
+        <div class="mb-3">
+          <select class="form-select form-control" name="listing[category]" aria-label="Default select example">
+            <option selected>Select Category</option>
+            <option value="Trending">Trending</option>
+            <option value="Room">Room</option>
+            <option value="Iconiccities">Iconic Cities</option>
+            <option value="Mountains">Mountains</option>
+            <option value="Castles">Castles</option>
+            <option value="Amazingpools">Amazing Pools</option>
+            <option value="Camping">Camping</option>
+            <option value="Farms">Farms</option>
+            <option value="Arctic">Arctic</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="listing[description]" class="form-label"
+            >Description</label
+          >
+          <textarea
+            type="text"
+            name="listing[description]"
+            placeholder="Write Something.............."
+            class="form-control"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+        <div class="mb-3">
+          <label for="listing[image]" class="form-label"
+            >Upload Listing Image</label
+          >
+          <input
+            type="file"
+            name="listing[image]"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="listing[price]" class="form-label">Price</label>
+            <input
+              type="number"
+              name="listing[price]"
+              placeholder="1200"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Price should be valid</div>
+          </div>
+          <div class="mb-3 col-md-8">
+            <label for="listing[country]" class="form-label">Coutry</label>
+            <input
+              type="text"
+              name="listing[country]"
+              placeholder="India"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Country name should be valid</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="listing[location]" class="form-label">Location</label>
+          <input
+            type="text"
+            name="listing[location]"
+            placeholder="Location"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Location should be valid</div>
+        </div>
+        <br />
+        <button class="btn btn-dark add-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
